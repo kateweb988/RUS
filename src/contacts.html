@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+	<title>РАП</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<meta property="og:locale" content="ru-Ru">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<div class="body-wrap">
+		<header class="header contacts" id="contacts">
+			<nav class="nav">
+				<div class="container">
+					<div class="nav__box q">
+						<a href="/" class="nav__logo">
+							<img src="img/logo.svg" alt="">
+						</a>
+						<ul class="nav__list q">
+							<li>
+								<a href="index.html">
+									ГЛАВНАЯ
+								</a>
+							</li>
+							<li>
+								<a href="contacts.html">
+									КОНТАКТЫ
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="menu-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</nav>
+			<div class="menu">
+				<div class="menu__top">
+					<ul class="nav__list">
+						<li>
+							<a href="/">
+								ГЛАВНАЯ
+							</a>
+						</li>
+						<li>
+							<a href="contacts.html">
+								КОНТАКТЫ
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="menu__bottom">
+					<div class="menu__item">
+						<p class="menu__title">
+							НАШ АДРЕС
+						</p>
+						<p class="menu__text">
+							123112, г. Москва, вн.тер.г. муниципальный округ Пресненский, наб. Пресненская, д.12, этаж 29,
+							комната а28, офис 3
+						</p>
+					</div>
+					<div class="menu__item">
+						<p class="menu__title">
+							СВЯЗАТЬСЯ С НАМИ
+						</p>
+						<a href="tel:+79261378017" class="footer__tel">
+							+ 7 926 137 80 17
+						</a>
+						<a href="mailto:info@rusitproject.ru" class="footer__mail">
+							info@rusitproject.ru
+						</a>
+					</div>
+					<div class="footer__info">
+						<p class="footer__name">
+							СОЦИАЛЬНЫЕ СЕТИ
+						</p>
+						<div class="footer__socials q">
+							<a href="#" class="footer__link q" target="_blank">
+								<svg class="icon">
+									<use xlink:href="img/svg-sprite.svg#soc1"></use>
+								</svg>
+							</a>
+							<a href="#" class="footer__link q" target="_blank">
+								<svg class="icon">
+									<use xlink:href="img/svg-sprite.svg#soc2"></use>
+								</svg>
+							</a>
+							<a href="#" class="footer__link q" target="_blank">
+								<svg class="icon">
+									<use xlink:href="img/svg-sprite.svg#soc3"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="footer__bottom">
+							<p>
+								2024 ©РусАйТиПроект
+							</p>
+							<a href="policy.html" target="_blank">
+								Политика конфиденциальности
+							</a>
+							<a href="#" target="_blank">
+								Политика использования cookie
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="map"></div>
+			<div class="container">
+				<div class="contacts__content">
+					<p class="contacts__sub">
+						КОНТАКТЫ
+					</p>
+					<div class="contacts__main">
+						<h2>
+							Всегда рядом с вами
+						</h2>
+					</div>
+					<p class="contacts__title">
+						НАШ АДРЕС
+					</p>
+					<p class="contacts__text">
+						123112, г. Москва, вн.тер.г. муниципальный округ Пресненский, наб. Пресненская, д.12, этаж 29,
+						комната а28, офис 3
+					</p>
+					<p class="contacts__title">
+						СВЯЗАТЬСЯ С НАМИ
+					</p>
+					<div class="contacts__info q">
+						<a href="tel:+ 79261378017">
+							+ 7 926 137 80 17
+						</a>
+						<a href="mailto:info@rusitproject.ru">
+							info@rusitproject.ru
+						</a>
+					</div>
+					<div class="footer__socials q">
+						<a href="#" class="footer__link q" target="_blank">
+							<svg class="icon">
+								<use xlink:href="img/svg-sprite.svg#soc1"></use>
+							</svg>
+						</a>
+						<a href="#" class="footer__link q" target="_blank">
+							<svg class="icon">
+								<use xlink:href="img/svg-sprite.svg#soc2"></use>
+							</svg>
+						</a>
+						<a href="#" class="footer__link q" target="_blank">
+							<svg class="icon">
+								<use xlink:href="img/svg-sprite.svg#soc3"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="call" id="call">
+			<div class="container">
+				<p class="contacts__sub">
+					НАПИСАТЬ НАМ
+				</p>
+				<div class="contacts__main">
+					<h2>
+						Давайте оставаться на связи
+					</h2>
+				</div>
+				<form action="#" class="call__form q" id="form">
+					<div class="call__left">
+						<div class="call__item">
+							<label>
+								Тема обращения
+							</label>
+							<div class="select-wrapper">
+								<div class="dropholder">
+									<div class="dropdown">
+										<p class="holder">Выберите ваш запрос</p>
+									</div>
+									<ul class="dropdownOption">
+										<li>Запрос1</li>
+										<li>Запрос2</li>
+										<li>Запрос3</li>
+										<li>Запрос4 </li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="call__item  input-holder">
+							<label>
+								ФИО*
+							</label>
+							<input type="text" placeholder="Укажите ваши данные" class="form-control" data-name="name">
+							<span class="err-txt">Введите имя.</span>
+						</div>
+						<div class="call__item input-holder">
+							<label>
+								Компания
+							</label>
+							<input type="text" placeholder="Название компании">
+						</div>
+						<div class="call__item input-holder">
+							<label>
+								Электронная почта*
+							</label>
+							<input type="email" placeholder="E-mail" class="form-control" data-name="mail">
+							<span class="err-txt">Введите почту</span>
+						</div>
+					</div>
+					<div class="call__right">
+						<div class="call__item">
+							<label>
+								Текст сообщения
+							</label>
+							<textarea name="text" placeholder="Ваше сообщение"></textarea>
+						</div>
+						<div class="call__bottom q">
+							<div class="call__flex input-holder checkbox q">
+								<input class="form-check-input custom-checkbox form-control" type="checkbox" name="check"
+									id="form1" value="Я даю свое согласие на обработку персональных данных" value="Checkbox1">
+								<label class="form-check-label " for="form1">
+									Я даю свое согласие на обработку <br> персональных данных
+								</label>
+								<span class="err-txt">Поставьте галочку</span>
+							</div>
+							<button class="btn">
+								ОТПРАВИТЬ
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<footer class="footer footer2" id="footer">
+			<div class="container">
+				<div class="footer__box q">
+					<picture>
+						<source srcset="img/logo.svg" media="(max-width: 576px)">
+						<img src="img/logo.svg" alt="" class="footer__logo">
+					</picture>
+					<div class="footer__content">
+						<div class="footer__item">
+							<p class="footer__name">
+								НАШ АДРЕС
+							</p>
+							<p class="footer__text">
+								123112, г. Москва, вн.тер.г. муниципальный округ Пресненский, наб. Пресненская, д.12, этаж 29,
+								комната а28, офис 3
+							</p>
+						</div>
+						<div class="footer__item">
+							<p class="footer__name">
+								СВЯЗАТЬСЯ С НАМИ
+							</p>
+							<a href="tel:+79261378017" class="footer__tel">
+								+ 7 926 137 80 17
+							</a>
+							<a href="mailto:info@rusitproject.ru" class="footer__mail">
+								info@rusitproject.ru
+							</a>
+						</div>
+					</div>
+					<ul class="footer__list">
+						<li>
+							<a href="/">
+								ГЛАВНАЯ
+							</a>
+						</li>
+						<li>
+							<a href="contacts.html">
+								КОНТАКТЫ
+							</a>
+						</li>
+					</ul>
+					<div class="footer__info">
+						<p class="footer__name">
+							СОЦИАЛЬНЫЕ СЕТИ
+						</p>
+						<div class="footer__socials q">
+							<a href="#" class="footer__link q" target="_blank">
+								<svg class="icon">
+									<use xlink:href="img/svg-sprite.svg#soc1"></use>
+								</svg>
+							</a>
+							<a href="#" class="footer__link q" target="_blank">
+								<svg class="icon">
+									<use xlink:href="img/svg-sprite.svg#soc2"></use>
+								</svg>
+							</a>
+							<a href="#" class="footer__link q" target="_blank">
+								<svg class="icon">
+									<use xlink:href="img/svg-sprite.svg#soc3"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="footer__bottom">
+							<p>
+								2024 ©РусАйТиПроект
+							</p>
+							<a href="policy.html" target="_blank">
+								Политика конфиденциальности
+							</a>
+							<a href="#" target="_blank">
+								Политика использования cookie
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<script type="text/javascript">
+		ymaps.ready(init);
+
+		function init() {
+			var myMap = new ymaps.Map("map", {
+				// Центр карты, указываем коордианты
+				center: [55.749633, 37.537434],
+				// Масштаб, тут все просто
+				zoom: 13,
+				// Отключаем все элементы управления
+				controls: []
+			});
+
+			var myGeoObjects = [];
+
+			// Наша метка, указываем коордианты
+			myGeoObjects = new ymaps.Placemark([55.749633, 37.537434], {
+				balloonContentBody: 'ЧистоGUN',
+			}, {
+				iconLayout: 'default#image',
+				// Путь до нашей картинки
+				iconImageHref: 'img/map.svg',
+				// Размер по ширине и высоте
+				iconImageSize: [50, 70],
+				// Смещение левого верхнего угла иконки относительно
+				// её «ножки» (точки привязки).
+				iconImageOffset: [-35, -35]
+			});
+
+			var clusterer = new ymaps.Clusterer({
+				clusterDisableClickZoom: false,
+				clusterOpenBalloonOnClick: false,
+			});
+
+			clusterer.add(myGeoObjects);
+			myMap.geoObjects.add(clusterer);
+			// Отлючаем возможность изменения масштаба
+			myMap.behaviors.disable('scrollZoom');
+
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="js/all.js"></script>
+</body>
+
+</html>

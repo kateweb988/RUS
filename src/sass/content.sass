@@ -1,0 +1,635 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder 
+   color: rgb(255, 255, 255) !important
+input::-moz-placeholder, textarea::-moz-placeholder
+   color: rgb(255, 255, 255) !important
+input:-ms-input-placeholder, textarea:-ms-input-placeholder  
+   color: rgb(255, 255, 255) !important
+input:-moz-placeholder, textarea:-moz-placeholder 
+   color: rgb(255, 255, 255) !important
+.menu-btn, .menu
+   display: none
+.popup__bg, .popup__bg2
+   position: fixed
+   top: 0
+   left: 0
+   width: 100%
+   height: 100vh
+   background: rgba(0, 0, 0, 0.7)
+   opacity: 0
+   pointer-events: none
+   transition: 0.5s all
+   overflow-y: auto
+   overflow-x: hidden
+.popup__bg.active, .popup__bg2.active
+    opacity: 1
+    pointer-events: all
+    transition: 0.5s all
+    z-index: 22
+.popup, .popup2
+   position: absolute
+   top: 49%
+   left: 50%
+   transform: translate(-50%, -50%) scale(0)
+   width: 1270px
+   height: max-content
+   transition: 0.5s all
+   text-align: center
+   background: white
+   padding: 59px 44px 47px
+.popup.active, .popup2.active
+   transform: translate(-50%, -46%) scale(1)
+   transition: 0.5s all
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+   display: none
+.custom-checkbox 
+   position: absolute
+   z-index: -1
+   opacity: 0
+.custom-checkbox+label 
+   display: flex
+   align-items: flex-start
+   user-select: none
+   cursor: pointer
+   font-size: 24px
+   line-height: 33px
+   color: #FFFFFF
+.custom-checkbox+label::before
+   content: ''
+   display: inline-block
+   flex-shrink: 0
+   display: flex
+   flex-grow: 0
+   background-repeat: no-repeat
+   background-position: center center
+   background: $blue
+   margin-right: 20px
+   flex: 1 0 auto
+   width: 30px
+   height: 30px
+   border: 1px solid white
+   transition: 0.2s
+   max-width: 30px
+   max-height: 30px
+   border-radius: 50%
+.custom-checkbox:checked+label::before 
+   background: url(/img/check.svg) no-repeat center center
+   background-color: $blue
+.swiper-pagination
+   display: flex
+   justify-content: center
+   bottom: 19px
+   position: absolute
+   z-index: 2
+.swiper-pagination-bullet
+   width: 52px
+   height: 2px
+   background-color: #ffffff
+   opacity: 0.2
+.swiper-pagination-bullet-active
+   background-color: $blue !important
+   opacity: 1
+.mob 
+   display: none
+.nav 
+   border-radius: 0px 0px 90px 90px
+   background: rgb(239, 248, 255)
+   &__logo 
+      width: 122px
+      height: 38px
+      display: block
+      img 
+         width: 100%
+         height: 100%
+         object-fit: contain
+   &__box 
+      align-items: center
+      justify-content: space-between
+      padding: 15px 0 14px
+   &__list 
+      li 
+         margin-right: 36px
+         &:last-child
+            margin-right: 0
+         a 
+            color: rgb(11, 56, 98)
+            font-size: 18px
+            font-weight: 700
+         &:hover 
+            a 
+               color: $blue
+.header 
+   position: relative
+   border-radius: 0px 0px 90px 90px
+   overflow: hidden
+   &__fig1 
+      position: absolute
+      bottom: 143px
+      left: 0
+   &__fig2 
+      position: absolute
+      bottom: 143px
+      right: 0
+   &__bg 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      z-index: -1
+      height: 100% 
+      object-fit: cover
+   &__box 
+      text-align: center
+      padding: 462px 0 53px
+   &__block 
+      align-items: center
+      justify-content: center
+      margin: 0 auto 14px 
+      background: white
+      width: max-content 
+      padding: 4px 20px 2px
+      height: auto
+      border-radius: 10px
+   &__text 
+      max-width: 635px 
+      width: 100%
+      margin: 0 auto 
+      color: rgb(255, 255, 255)
+      font-size: 16px
+      line-height: 140%
+.info 
+   border-radius: 90px 90px 0px 0px
+   overflow: hidden
+   background: rgb(11, 56, 98)
+   position: relative
+   &__pic 
+      width: 50%
+      height: 800px
+      margin-right: 40px
+      object-fit: cover
+      position: absolute
+      top: 0
+      left: 0
+      &_2 
+         position: absolute
+         right: 0
+         bottom: -2px
+         left: initial
+         top: initial
+         width: 50%
+         height: 472px
+         margin-right: 0
+   &__item 
+      align-items: flex-start
+      &_2
+         justify-content: space-between
+         align-items: center
+         .info__text 
+            width: 100%
+            max-width: 485px
+            flex: 0 1 auto
+         .info__content 
+            padding: 113px 0px
+            margin-left: -18px
+   &__content 
+      width: 100%
+      max-width: 532px
+      padding: 80px 0
+      margin-left: auto
+   &__text 
+      margin-bottom: 20px
+      span 
+         font-weight: bold
+   &__list 
+      margin-bottom: 20px
+      padding-left: 9px
+      li 
+         display: flex
+         margin-bottom: 5px
+         align-items: center
+         &:before 
+            display: inline-flex
+            content: ""
+            width: 3px
+            height: 3px
+            background: white 
+            border-radius: 50%
+            margin-right: 10px
+   &__sub 
+      margin-bottom: 16px
+      font-size: 20px
+      font-weight: 700
+      line-height: 100%
+   &__title 
+      align-items: center
+      justify-content: center
+      width: max-content 
+      background: white 
+      height: auto
+      border-radius: 10px
+      margin-bottom: 32px
+      padding: 10px 20px
+.van 
+   padding: 61px 0 50px
+   margin-left: -47px
+   position: relative
+   h3 
+      margin-bottom: 60px
+      color: rgb(17, 160, 220)
+      font-size: 20px
+      font-weight: 700
+      line-height: 100%
+   &__fig 
+      position: absolute
+      right: 0
+      bottom: -276px
+      z-index: -1 
+   &__box 
+      justify-content: flex-start
+      flex-wrap: wrap 
+   &__item 
+      margin-bottom: 29px  
+      width: 28%
+      margin-right: 133px
+      &:nth-child(3)
+         margin-right: -83px
+         margin-left: auto
+      &:last-child
+         margin-right: auto
+   &__pic 
+      margin-bottom: 17px
+   &__name 
+      margin-bottom: 14px
+      color: rgb(17, 160, 220)
+      font-size: 20px
+      font-weight: 700
+      line-height: 135%
+   &__text 
+      color: rgb(17, 160, 220)
+      width: 100%
+      max-width: 282px
+.area 
+   background: #0B3862
+   overflow: hidden
+   border-radius: 90px
+   padding-bottom: 94px
+   h2 
+      display: flex
+      align-items: flex-start
+      span 
+         margin-right: 10px
+   &__pic 
+      position: absolute
+      left: 0
+      top: 0
+      height: 472px
+      object-fit: cover 
+      object-position: top center
+      width: 50%
+   .info__content 
+      padding: 123px 0
+      max-width: 540px
+   .info__title 
+      padding: 10px 40px 10px 30px
+   .info__text 
+      margin-bottom: 0
+   &__wrap  
+      position: relative
+      &:nth-child(2n)
+         .area__pic 
+            right: 0
+            left: initial
+         .info__content
+            margin-left: -22px
+            padding: 107px 0
+      &:nth-child(3)
+         margin-top: 9px
+      &:nth-child(4)
+         margin-top: 25px
+         .info__content
+            padding-top: 200px
+.footer 
+   background: #0B3862
+   overflow: hidden
+   border-radius: 90px 90px 0 0
+   padding: 80px 0 70px
+   &__box 
+      align-items: flex-start
+      margin-left: -22px
+   &__content 
+      width: 100%
+      max-width: 242px
+      margin-left: 76px
+   &__name 
+      margin-bottom: 12px
+      color: rgb(255, 255, 255)
+      font-size: 16px
+      font-weight: 700
+   &__text 
+      font-size: 14px 
+      margin-bottom: 32px
+      line-height: 141%
+   &__item 
+      a 
+         color: rgb(255, 255, 255)
+         font-size: 14px
+         display: block
+         width: max-content
+         &:hover 
+            color: $blue
+   &__list 
+      margin-left: 57px
+      li 
+         margin-bottom: 12px
+         a 
+            color: rgb(255, 255, 255)
+            font-weight: 700
+         &:hover 
+            a 
+               color: $blue
+   &__info 
+      margin-left: auto
+      margin-right: 23px
+   &__link 
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50% 
+      background: white 
+      margin-right: 12px
+      width: 40px
+      height: 40px
+      padding-top: 2px
+      .icon 
+         height: 18px 
+         width: 15px
+         fill: rgb(11, 56, 98)
+      &:last-child
+         margin-right: 0
+         .icon 
+            height: 12px
+            width: 20px
+      &:nth-child(2)
+         padding-top: 0
+         .icon 
+            width: 18px
+      &:hover 
+         background: $blue
+         .icon 
+            fill: white
+   &__bottom 
+      margin-top: 96px
+      p 
+         font-size: 14px
+         margin-bottom: 8px
+      a 
+         margin-bottom: 15px
+         color: rgb(255, 255, 255)
+         font-size: 14px
+         width: max-content 
+         display: block
+         line-height: 100%
+         border-bottom: 1px solid white
+         &:hover 
+            color: $blue
+            border-bottom: 1px solid $blue
+   &__com 
+      text-align: center
+      font-size: 14px
+      color: white !important
+      display: block
+      margin: 6px auto 0
+      img 
+         margin-left: 8px
+   &__socials 
+      margin-top: 23px
+.contacts 
+   background: rgb(5, 11, 46)
+   &__content 
+      padding: 90px 0 123px
+      width: 100%
+      max-width: 400px
+   &__sub
+      margin-bottom: 16px
+      color: rgb(255, 255, 255)
+      font-size: 20px
+      font-weight: 700
+   &__main 
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 5px 12px 
+      background: white
+      margin-bottom: 40px
+      border-radius: 10px
+      width: max-content
+   &__title 
+      margin-bottom: 16px
+      font-size: 20px
+      font-weight: 700
+      line-height: 100%
+   &__text 
+      margin-bottom: 24px
+   &__info 
+      align-items: center
+      a 
+         margin-right: 25px
+         color: rgb(255, 255, 255)
+         &:last-child
+            margin-right: 0
+         &:hover 
+            color: $blue
+   #map 
+      width: 50%
+      height: 665px
+      position: absolute
+      top: 0
+      right: 0
+      z-index: 0
+   .nav 
+      z-index: 50
+      position: relative
+.footer2 
+   background: rgb(255, 255, 255)
+   color: rgb(5, 11, 46)
+   .footer__name, .footer__name, .footer__item a, .footer__bottom a, .footer__list li a
+      color: rgb(5, 11, 46) 
+   .footer__link
+      background: rgb(11, 56, 98)
+      .icon 
+         fill: white
+      &:hover 
+         background: $blue
+   .footer__list
+      margin-left: 150px
+   .footer__item a, .footer__bottom a, .footer__list li a
+      &:hover 
+         color: $blue
+   .footer__logo 
+      width: 156px
+      height: 49px
+      object-fit: contain
+.call 
+   background: $blue
+   border-radius: 90px 90px 0 0
+   padding: 80px 0 176px
+   margin-bottom: -79px
+   h2 
+      color: $blue
+   &__form 
+      align-items: flex-start
+      justify-content: space-between
+      label 
+         margin-bottom: 4px
+         color: rgb(255, 255, 255)
+         font-size: 16px
+         font-weight: 400
+         line-height: 140%
+         display: flex
+         margin: 0 0 4px 10px
+      input 
+         width: 100%
+         height: 40px
+         border: 1px solid rgb(255, 255, 255)
+         border-radius: 10px
+         color: rgb(255, 255, 255)
+         font-size: 16px
+         padding-left: 16px
+         background: transparent
+      textarea 
+         width: 100%
+         max-width: 100%
+         min-height: 288px
+         border: 1px solid rgb(255, 255, 255)
+         border-radius: 10px
+         color: rgb(255, 255, 255)
+         font-size: 16px
+         padding-left: 16px
+         padding-top: 10px
+         background: transparent
+      .custom-checkbox + label
+         font-size: 12px
+         font-weight: 400
+         line-height: 132%
+         margin-left: 0
+         position: relative
+         left: 0px
+         margin-right: 25px
+   &__item 
+      margin-bottom: 16px
+      width: 100%
+   &__left
+      width: 42%  
+   &__right
+      width: 56%  
+   &__flex 
+      flex-direction: column
+   &__bottom 
+      margin-top: 20px
+      align-items: flex-start
+      justify-content: flex-end
+   .custom-checkbox + label::before
+      width: 22px
+      height: 22px
+      border: 2px solid rgb(255, 255, 255)
+      border-radius: 4px
+      box-sizing: border-box
+      background-color: transparent
+      margin-right: 10px
+.policy 
+   &__content 
+      padding: 60px 0 80px
+      h1 
+         font-weight: bold
+         font-size: 20px
+         color: white
+         margin-bottom: 30px
+      .info__list
+         margin-top: -5px
+         li
+            font-size: 14px
+   &__name 
+      font-weight: bold
+      font-size: 20px
+      margin-bottom: 15px
+   &__text 
+      font-size: 14px
+      margin-bottom: 25px
+.select-wrapper  
+   display: block 
+   width: 100%
+   height: 40px 
+.dropholder  
+   width: 100% 
+   height: 100% 
+   border-radius: 10px 
+   color: #fff 
+   position: relative 
+   box-sizing: border-box 
+.holder   
+   font-size: 16px 
+   margin: 0 
+   margin-top: 8.5px
+.dropdown,
+.dropholder  
+   background: transparent
+   font-size: 16px
+.dropdown  
+   width: 100%
+   height: 100%
+   border: 1px solid rgb(255, 255, 255)
+   border-radius: 10px
+   color: rgb(255, 255, 255)
+   font-size: 16px
+   padding-left: 16px
+   background: transparent
+   padding-left: 20px 
+   box-sizing: border-box 
+   z-index: 20 
+   cursor: pointer
+   &:after  
+      content: "" 
+      background: url(/img/arrow.svg) no-repeat center center 
+      position: absolute 
+      right: 10px 
+      top: 11px 
+      display: block 
+      width: 20px
+      height: 20px
+   &.active + .dropdownOption  
+      display: block 
+.dropdownOption  
+   padding: 10px 0  
+   position: absolute 
+   left: 0 
+   top: 50px 
+   right: 0 
+   margin: 0 
+   cursor: pointer 
+   display: none 
+   background: white
+   border-radius: 10px
+   z-index: 5 
+   overflow: hidden 
+   transition: 0.5s
+   li  
+      padding: 10px 15px 
+      color: $blue
+      transition: 0.5s
+      list-style: none 
+      &:hover:not(.current)  
+         color: rgb(5, 11, 46) 
+.current  
+   background-color: rgb(5, 11, 46) 
+   color: white !important
+.call__form .err-txt
+   display: none
+   padding: 10px 5px
+   margin-bottom: 10px
+   color:#f20
+.call__form
+   .input-holder.error
+      border-color:#f20
+      input 
+         border: 1px solid #f20 !important
+      .err-txt
+         display: block
