@@ -15,11 +15,13 @@
 	<title>РАП</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
+	<link rel="icon" href="img/favicon.svg" type="image/x-icon">
 
 	<meta property="og:locale" content="ru-Ru">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="">
 	<meta property="og:description" content="">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -325,13 +327,13 @@
 						Давайте оставаться на связи
 					</h2>
 				</div>
-				<form action="#" class="call__form q" id="form">
+				<form action="success.php" class="call__form q js-form" id="popupResult" method="post">
 					<div class="call__left">
 						<div class="call__item">
 							<label>
 								Тема обращения
 							</label>
-							<div class="select-wrapper">
+							<!-- <div class="select-wrapper">
 								<div class="dropholder">
 									<div class="dropdown">
 										<p class="holder">Выберите ваш запрос</p>
@@ -344,25 +346,32 @@
 									</ul>
 								</div>
 							</div>
+							-->
+							<select class="select form__field" name="sel">
+								<option value="1">Выберите ваш запрос</option>
+								<option value="zapros1">запрос1</option>
+								<option value="zapros2">запрос2</option>
+								<option value="zapros3">запрос3</option>
+							</select>
 						</div>
-						<div class="call__item  input-holder">
+						<div class="call__item  input-holder ">
 							<label>
 								ФИО*
 							</label>
-							<input type="text" placeholder="Укажите ваши данные" class="form-control" data-name="name">
+							<input type="text" placeholder="Укажите ваши данные" class="form__field" required="" name="name">
 							<span class="err-txt">Введите имя.</span>
 						</div>
 						<div class="call__item input-holder">
 							<label>
 								Компания
 							</label>
-							<input type="text" placeholder="Название компании">
+							<input type="text" placeholder="Название компании" name="company" class="form-control form__field">
 						</div>
 						<div class="call__item input-holder">
 							<label>
 								Электронная почта*
 							</label>
-							<input type="email" placeholder="E-mail" class="form-control" data-name="mail">
+							<input type="email" placeholder="E-mail" class="form-control form__field" required="" name="mail">
 							<span class="err-txt">Введите почту</span>
 						</div>
 					</div>
@@ -371,12 +380,12 @@
 							<label>
 								Текст сообщения
 							</label>
-							<textarea name="text" placeholder="Ваше сообщение"></textarea>
+							<textarea placeholder="Ваше сообщение" class="form-control form__field" name="text"></textarea>
 						</div>
 						<div class="call__bottom q">
 							<div class="call__flex input-holder checkbox q">
 								<input class="form-check-input custom-checkbox form-control" type="checkbox" name="check"
-									id="form1" value="Я даю свое согласие на обработку персональных данных" value="Checkbox1">
+									id="form1" value="Я даю свое согласие на обработку персональных данных" required>
 								<label class="form-check-label " for="form1">
 									Я даю свое согласие на обработку <br> персональных данных
 								</label>
@@ -467,51 +476,28 @@
 				</div>
 			</div>
 		</footer>
-
+		<div style="display:none;">
+			<div class="box-modal" id="popup-thank">
+				<div class="popup-call__box popup3">
+					<div class="box-modal__close articmodal-close">
+						<img src="img/close.svg" alt="">
+					</div>
+					<div class="popup__wrap">
+						<h2 class="popup__title">
+							Заявка успешно <br> отправлена !
+						</h2>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<script type="text/javascript">
-		ymaps.ready(init);
-
-		function init() {
-			var myMap = new ymaps.Map("map", {
-				// Центр карты, указываем коордианты
-				center: [59.845537, 30.322902],
-				// Масштаб, тут все просто
-				zoom: 11,
-				// Отключаем все элементы управления
-				controls: []
-			});
-
-			var myGeoObjects = [];
-
-			// Наша метка, указываем коордианты
-			myGeoObjects = new ymaps.Placemark([59.845537, 30.322902], {
-				balloonContentBody: 'ЧистоGUN',
-			}, {
-				iconLayout: 'default#image',
-				// Путь до нашей картинки
-				iconImageHref: 'img/map.svg',
-				// Размер по ширине и высоте
-				iconImageSize: [50, 70],
-				// Смещение левого верхнего угла иконки относительно
-				// её «ножки» (точки привязки).
-				iconImageOffset: [-35, -35]
-			});
-
-			var clusterer = new ymaps.Clusterer({
-				clusterDisableClickZoom: false,
-				clusterOpenBalloonOnClick: false,
-			});
-
-			clusterer.add(myGeoObjects);
-			myMap.geoObjects.add(clusterer);
-			// Отлючаем возможность изменения масштаба
-			myMap.behaviors.disable('scrollZoom');
-
-		}
-	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="js/all.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.js"></script>
+	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
+	<script type="text/javascript"
+		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
 </body>
 
 </html>
